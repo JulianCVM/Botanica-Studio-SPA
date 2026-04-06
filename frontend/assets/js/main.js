@@ -1,5 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    // Theme Toggle Logic
+    const themeBtn = document.getElementById('themeToggle');
+    const bodyEl = document.body;
+    
+    const savedTheme = localStorage.getItem('botanica-theme');
+    if (savedTheme === 'dark') {
+        bodyEl.classList.add('dark-theme');
+    }
+    
+    if(themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            bodyEl.classList.toggle('dark-theme');
+            if (bodyEl.classList.contains('dark-theme')) {
+                localStorage.setItem('botanica-theme', 'dark');
+            } else {
+                localStorage.setItem('botanica-theme', 'light');
+            }
+        });
+    }
+    
     // Custom Cursor
     const cursor = document.getElementById('cursor');
     const clickables = document.querySelectorAll('.clickable, a, button');
@@ -32,6 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
         });
+    });
+
+    // Navbar Scroll Effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
     });
 
     // Scroll Animations (Intersection Observer)
@@ -101,13 +131,16 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function renderServices(filter = 'all') {
         grid.innerHTML = '';
+        let index = 0;
         data.services.forEach(item => {
             if(filter !== 'all' && item.category !== filter) return;
             // Solo activos en public site
             if(!item.active) return;
             
             const el = document.createElement('div');
-            el.className = 'service-card clickable fade-up visible';
+            el.className = 'service-card clickable fade-up';
+            el.style.transitionDelay = `${index * 0.1}s`;
+            
             el.innerHTML = `
                 <img src="${item.image}" alt="${item.title}" loading="lazy">
                 <div class="service-info">
@@ -120,6 +153,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
             grid.appendChild(el);
+            
+            // Trigger animation after append
+            setTimeout(() => el.classList.add('visible'), 50);
+            
+            index++;
         });
         
         // Re-apply hover effect logic since elements are new
