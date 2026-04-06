@@ -1,0 +1,13 @@
+[build]
+  # No hay necesidad de un comando de compilación porque la plantilla es estática pura (HTML/CSS/JS Vanilla)
+  # Esto la hace extremadamente rápida, ligera y óptima sin dependencias como Next.js
+  command = ""
+  
+  # Este es el directorio que Netlify va a publicar de cara a internet
+  publish = "frontend/"
+
+[[headers]]
+  # Agregamos política de caché básica para que las imágenes y assets carguen volando
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
