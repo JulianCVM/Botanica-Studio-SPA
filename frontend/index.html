@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botanica Studio | Spa & Beauty</title>
+    <meta name="description" content="Experiencia de spa y belleza orgánica y natural. Botanica Studio ofrece servicios de relajación, cuidado facial y corporal con ingredientes naturales.">
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#" class="logo clickable">
+            <svg viewBox="0 0 24 24"><path d="M17.5,7.22c-0.19-2.31-2.02-4.14-4.32-4.32c-3.79-0.31-7.23,2.05-8.56,5.32c-0.78,1.91-0.96,4.02-0.5,6.01c0.07,0.3,0.34,0.5,0.65,0.5h0.01c0.31,0,0.57-0.2,0.65-0.5c0.39-1.63,1.35-3.07,2.7-4.04c1.37-0.98,3-1.42,4.68-1.28C14.07,9.15,15,9.97,15,11.23v0.69c0,0.39,0.31,0.7,0.7,0.7h0.52c1.23,0,2.15-0.95,2.01-2.17 C18.06,9.13,17.76,8.04,17.5,7.22z M12.5,21.5c-4.96,0-9-4.04-9-9c0-0.41,0.03-0.82,0.08-1.22c0.05-0.38-0.22-0.74-0.6-0.78 C2.6,10.45,2.24,10.72,2.2,11.1C2.07,11.89,2,12.69,2,13.5c0,5.79,4.71,10.5,10.5,10.5S23,19.29,23,13.5c0-1.78-0.45-3.51-1.3-5.04 c-0.19-0.34-0.63-0.46-0.97-0.27c-0.34,0.19-0.46,0.63-0.27,0.97C21.13,10.37,21.5,11.9,21.5,13.5C21.5,18.46,17.46,21.5,12.5,21.5z"/></svg>
+            Botanica
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#nosotros" class="clickable">Nosotros</a></li>
+            <li><a href="#catalogo" class="clickable">Catálogo</a></li>
+            <li><a href="#experiencia" class="clickable">Experiencia</a></li>
+            <li><a href="#testimonios" class="clickable">Testimonios</a></li>
+            <li><a href="#contacto" class="clickable">Contacto</a></li>
+        </ul>
+        <button class="hamburger clickable" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content fade-up" style="padding-left: 5%;">
+            <h1 class="text-xxl">Belleza en<br>estado puro</h1>
+            <p class="text-lg" style="margin-top: 1rem; color: #666; max-width: 400px;">
+                Cuidado natural, orgánico y consciente para tu cuerpo, mente y alma. 
+            </p>
+        </div>
+        <div class="hero-images fade-up" style="transition-delay: 0.2s;">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&auto=format&fit=crop&q=60" alt="Spa resort" class="img-collage img-1">
+            <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=600&auto=format&fit=crop&q=60" alt="Spa ingredients" class="img-collage img-2">
+            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&auto=format&fit=crop&q=60" alt="Oils" class="img-collage img-3">
+        </div>
+        <div class="scroll-indicator">
+            Descubre
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section class="nosotros" id="nosotros">
+        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&auto=format&fit=crop&q=80" alt="Botanica Studio Team" class="nosotros-img fade-up">
+        <div class="nosotros-text fade-up" style="transition-delay: 0.2s;">
+            <h2 class="text-xl" style="margin-bottom: 2rem;">Nuestra Esencia</h2>
+            <blockquote class="quote-block">
+                "Creemos en el poder curativo de la naturaleza. Nuestra misión es ofrecer un santuario donde la belleza exterior se nutre desde la paz interior."
+            </blockquote>
+            <p>Utilizamos exclusivamente productos orgánicos, veganos y cruelty-free en todos nuestros rituales. En Botanica Studio, cada tratamiento es un viaje sensorial diseñado a medida para las necesidades únicas de tu piel y tu energía.</p>
+            
+            <div class="counters">
+                <div class="counter-item">
+                    <h3 id="counter-years">0</h3>
+                    <p>Años de experiencia</p>
+                </div>
+                <div class="counter-item">
+                    <h3 id="counter-clients">0</h3>
+                    <p>Clientes felices</p>
+                </div>
+                <div class="counter-item">
+                    <h3 id="counter-staff">0</h3>
+                    <p>Especialistas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo -->
+    <section class="catalogo" id="catalogo">
+        <h2 class="text-xl fade-up" style="text-align: center; margin-bottom: 2rem;">Nuestros Servicios</h2>
+        <div class="filters fade-up" id="serviceFilters" style="justify-content: center; transition-delay: 0.1s;">
+            <button class="filter-btn active clickable" data-filter="all">Todos</button>
+            <button class="filter-btn clickable" data-filter="rostro">Rostro</button>
+            <button class="filter-btn clickable" data-filter="cuerpo">Cuerpo</button>
+            <button class="filter-btn clickable" data-filter="cabello">Cabello</button>
+            <button class="filter-btn clickable" data-filter="unas">Uñas</button>
+        </div>
+        
+        <div class="masonry-grid" id="masonryGrid">
+            <!-- Cargado vía JS -->
+        </div>
+    </section>
+
+    <!-- Experiencia (Proceso) -->
+    <section class="experiencia fade-up" id="experiencia" style="background-color: var(--crema);">
+        <h2 class="text-xl" style="text-align: center; margin-bottom: 4rem;">El Viaje Botanica</h2>
+        
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            <div class="timeline-progress" id="timelineProgress"></div>
+            
+            <div class="timeline-step">
+                <div class="step-icon">
+                    <svg viewBox="0 0 24 24"><path d="M19,4h-1V2h-2v2H8V2H6v2H5C3.89,4,3.01,4.9,3.01,6L3,20c0,1.1,0.89,2,2,2h14c1.1,0,2-0.9,2-2V6C21,4.9,20.1,4,19,4z M19,20H5V10h14V20z M9,14H7v-2h2V14z M13,14h-2v-2h2V14z M17,14h-2v-2h2V14z M9,18H7v-2h2V18z M13,18h-2v-2h2V18z M17,18h-2v-2h2V18z"/></svg>
+                </div>
+                <h4>1. Reserva</h4>
+                <p class="text-sm">Encuentra el momento perfecto</p>
+            </div>
+            
+            <div class="timeline-step">
+                <div class="step-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M11,19.93c-3.95-0.49-7-3.85-7-7.93c0-0.62,0.08-1.22,0.21-1.79 L9,15v1c0,1.1,0.9,2,2,2V19.93z M17.9,17.39c-0.26-0.81-1-1.39-1.9-1.39h-1v-3c0-0.55-0.45-1-1-1H8v-2h2c0.55,0,1-0.45,1-1V7h2 c1.1,0,2-0.9,2-2v-0.41c2.93,1.19,5,4.06,5,7.41C20,13.87,19.22,15.79,17.9,17.39z"/></svg>
+                </div>
+                <h4>2. Bienvenida</h4>
+                <p class="text-sm">Té aromático y diagnóstico integral</p>
+            </div>
+            
+            <div class="timeline-step">
+                <div class="step-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20.57,14.86L22,13.43c-0.59-0.59-1.54-0.59-2.12,0l-2.83,2.83l-0.67-0.67L15,17l1.41,1.41l0.67-0.67l0.04,0.04 l-5.26,5.26c-0.59,0.59-1.54,0.59-2.12,0l-2.12-2.12l4.24-4.24l-3.54-3.54l-4.24,4.24l-2.12-2.12c-0.59-0.59-0.59-1.54,0-2.12 l5.26-5.26l0.04,0.04l-0.67,0.67L7,15l1.41,1.41l0.67-0.67l2.83-2.83c0.59-0.59,0.59-1.54,0-2.12L10.5,9.36l1.41-1.41l1.41,1.41 l1.41-1.41l1.41,1.41L15,8V6h2v0.5l1.5-1.5H23v4.5l-1.5,1.5V11h-0.5L20.57,14.86z M10,12l-1.41,1.41l2.12,2.12L12.12,14.12 L10,12z"/></svg>
+                </div>
+                <h4>3. El Servicio</h4>
+                <p class="text-sm">Tratamiento con técnica experta</p>
+            </div>
+            
+            <div class="timeline-step">
+                <div class="step-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/></svg>
+                </div>
+                <h4>4. Resultado</h4>
+                <p class="text-sm">Renovación total y relajación</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonios fade-up" id="testimonios">
+        <h2 class="text-xl" style="margin-bottom: 3rem;">Lo Que Dicen</h2>
+        
+        <div class="carousel">
+            <div class="carousel-inner" id="carouselInner">
+                <!-- Generado por JS -->
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-ctrl clickable" id="prevTestimonial">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                </button>
+                <button class="carousel-ctrl clickable" id="nextTestimonial">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contacto fade-up" id="contacto">
+        <div class="contacto-info">
+            <h2 class="text-xl" style="margin-bottom: 2rem;">Conecta<br>con nosotros</h2>
+            <div class="info-item">
+                <svg viewBox="0 0 24 24"><path d="M12,2C8.13,2,5,5.13,5,9c0,5.25,7,13,7,13s7-7.75,7-13C19,5.13,15.87,2,12,2z M12,11.5c-1.38,0-2.5-1.12-2.5-2.5 s1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5S13.38,11.5,12,11.5z"/></svg>
+                <div>
+                    <strong>Visítanos</strong>
+                    <p>Av. Botánica 123, Distrito Verde<br>Ciudad, 10001</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <svg viewBox="0 0 24 24"><path d="M6.62,10.79c1.44,2.83,3.76,5.14,6.59,6.59l2.2-2.2c0.27-0.27,0.67-0.36,1.02-0.24c1.12,0.37,2.33,0.57,3.57,0.57 c0.55,0,1,0.45,1,1V20c0,0.55-0.45,1-1,1c-9.39,0-17-7.61-17-17c0-0.55,0.45-1,1-1h3.5c0.55,0,1,0.45,1,1c0,1.25,0.2,2.45,0.57,3.57 c0.11,0.35,0.03,0.74-0.25,1.02L6.62,10.79z"/></svg>
+                <div>
+                    <strong>Escríbenos o Llévamos</strong>
+                    <p>+34 900 123 456<br>+34 600 123 456 (WhatsApp)</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <svg viewBox="0 0 24 24"><path d="M11.99,2C6.47,2,2,6.48,2,12s4.47,10,9.99,10C17.52,22,22,17.52,22,12S17.52,2,11.99,2z M12,20c-4.42,0-8-3.58-8-8 s3.58-8,8-8s8,3.58,8,8S16.42,20,12,20z M12.5,7H11v6l5.25,3.15l0.75-1.23l-4.5-2.67V7z"/></svg>
+                <div>
+                    <strong>Horario</strong>
+                    <p>Lun - Sab: 09:00 - 20:00<br>Dom: Cerrado</p>
+                </div>
+            </div>
+        </div>
+        
+        <form class="contacto-form" onsubmit="event.preventDefault();">
+            <div class="form-group">
+                <input type="text" class="form-input" placeholder="Tu Nombre">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-input" placeholder="Tu Correo Electrónico">
+            </div>
+            <div class="form-group">
+                <select class="form-input" style="color: rgba(0,0,0,0.4);">
+                    <option value="" disabled selected>Servicio de interés</option>
+                    <option>Rostro</option>
+                    <option>Cuerpo</option>
+                    <option>Cabello</option>
+                    <option>Uñas</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea class="form-input" placeholder="Mensaje..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit clickable">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">Botanica</div>
+        <p style="opacity: 0.8; max-width: 400px;">"La verdadera belleza surge del equilibrio perfecto entre tu cuerpo, tu mente y la naturaleza."</p>
+        <div class="social-links">
+            <a href="#" class="clickable"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.181a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg></a>
+            <a href="#" class="clickable"><svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.597 0 0 .597 0 1.325v21.351C0 23.403.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.597 1.323-1.325V1.325C24 .597 23.403 0 22.675 0z"/></svg></a>
+            <a href="#" class="clickable"><svg viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.951-7.252 4.168 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.367 18.625 0 12.017 0z"/></svg></a>
+        </div>
+        <p class="text-sm">© 2026 Botanica Studio. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./assets/js/mock-data.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

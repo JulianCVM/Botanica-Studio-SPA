@@ -1,0 +1,17 @@
+{
+  "name": "botanica-studio",
+  "version": "1.0.0",
+  "description": "Static frontend template for Botanica Studio",
+  "main": "backend/index.js",
+  "scripts": {
+    "dev:front": "serve frontend -l 3000",
+    "dev:back": "nodemon backend/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "serve": "^14.2.0"
+  }
+}
